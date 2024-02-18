@@ -1,0 +1,112 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.wraper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10rem;
+    background-image: linear-gradient(45deg, rgb(79, 79, 143),rgb(223, 147, 157));
+}
+
+.info{
+   position: relative;
+}
+
+.info-text{
+    padding: .5rem;
+    font-size: 1.4rem;
+}
+
+.back{
+    background-color: #fff;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .4;
+    border-radius: .7rem;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-gap: 0;
+}
+
+
+.box{
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.box1, .box2 , .box3{
+    border-top: 0;
+}
+
+
+.box1, .box4 , .box7{
+    border-left: 0;
+}
+
+.box3, .box6 , .box9{
+    border-right: 0;
+}
+
+.box7 , .box8 ,.box9{
+    border-bottom: 0;
+}
+.info2{
+    position: relative;
+    transition: all .6s;
+}
+
+.info2-text{
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.info2-text::after{
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    opacity: .4;
+    border-radius: .8rem;
+    cursor: pointer;
+}
+
+
+.active{
+    background-color: rgb(115, 216, 115);
+}
+
+
+@media(max-width :1100px) {
+    .wraper{
+        transform: scale(2.3);
+    }
+}
